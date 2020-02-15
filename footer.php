@@ -9,7 +9,7 @@
  ?>
 				
 				<footer class="footer" role="contentinfo">
-                  <div class="grid-container fluid">
+                  <div class="grid-container">
                     <div class="grid-x grid-margin-x">
                     <?php if ( is_active_sidebar( 'footer-widget-one' ) || is_active_sidebar( 'footer-widget-two' ) || is_active_sidebar( 'footer-widget-three' )) { ?>
                       <?php dynamic_sidebar( 'footer-widget-one' ); ?>
