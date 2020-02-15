@@ -1,0 +1,45 @@
+body {overflow-x: hidden;}
+a {
+  color: #000;
+}
+.top-bar, .top-bar ul {
+  background-color: transparent;
+}
+.card {
+  img {
+    height: 40vh;
+    object-fit: cover;
+  }
+}
+#frontpage-hero.card {
+  margin-bottom: 11rem;
+  border: none;
+  .front-page.card-divider {
+    justify-content: center;
+    background: transparent;
+  }
+  .card-section {
+    text-align: center;
+    margin-top: 4rem;
+  }
+}
+nav {
+  #footer-links {
+    justify-content: center;
+  }
+}
+footer {
+  nav{
+    margin-top: 5.5rem;
+    margin-bottom: 5.5rem;
+  }
+  margin-top: 11rem;
+  h3.widget-title {
+    text-align: center;
+    margin-bottom: 5.5rem;
+  }
+}
+
+#card-cont-two.grid-container {
+  margin-top: 11rem;
+}
