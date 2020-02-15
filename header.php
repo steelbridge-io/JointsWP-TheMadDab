@@ -63,5 +63,6 @@
                     <h2 class="hero-subtitle"><?php echo $front_page_subtitle; ?></h2>
                     <h3 class="hero-text"><?php echo $front_page_header_text; ?></h3>
                   </div>
+                  <?php get_template_part( 'parts/nav', 'product-bar' ); ?>
                 </div>
               <?php endif; ?>
