@@ -6,7 +6,7 @@
  */
 ?>
 
-<div class="top-bar" id="main-menu">
+<div class="top-bar" id="main-prod-menu">
   <div class="top-bar-center">
     <?php joints_product_nav(); ?>
   </div>
