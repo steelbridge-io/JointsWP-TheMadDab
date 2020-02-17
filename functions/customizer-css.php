@@ -13,12 +13,13 @@ function customizer_css() {
   
   $css_1 .= '
 			 .fp-topcont-img.card-section {
-        background-image: url(' . $front_page_hero_image . ');
+        background-image: url(' . $front_page_hero_image . '),  linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         padding-top: 8rem;
         padding-bottom: 8rem;
+        background-blend-mode: overlay;
       }
 		';
   return $css_1;
