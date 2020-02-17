@@ -178,6 +178,41 @@ function themaddab_customizer_register( $wp_customize ) {
     );
   }
   
+  // Header Logo
+  $wp_customize->add_setting(
+    'top-bar-logo',
+    [
+      'default'           => '',
+      'sanitize_callback' => 'esc_attr',
+    ]
+  );
+  
+  $wp_customize->add_control(
+    new WP_Customize_Image_Control(
+      $wp_customize,
+      'top-bar-logo',
+      [
+        'description' => __( 'Adds a logo to the top left corner.', 'themaddab' ),
+        'label'       => __( 'Logo', 'themaddab' ),
+        'section'     => 'themaddab_hero_section_settings',
+        'settings'    => 'top-bar-logo',
+      ]
+    )
+  );
+  
+  if ( isset( $wp_customize->selective_refresh ) ) {
+    $wp_customize->selective_refresh->add_partial(
+      'top-bar-logo',
+      [
+        'selector'        => '.top-bar-logo',
+        'settings'        => [ 'top-bar-logo' ],
+        'render_callback' => function() {
+          return get_theme_mod( 'top-bar-logo' );
+        },
+      ]
+    );
+  }
+  
   
   /*
   

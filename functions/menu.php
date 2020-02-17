@@ -3,7 +3,7 @@
 register_nav_menus(
 	array(
 		'main-nav'		=> __( 'The Main Menu', 'jointswp' ),		// Main nav in header
-    'product-nav' => __('Product Category Menu', 'jointswp'),   // Product menu below header
+        'product-nav' => __('Product Category Menu', 'jointswp'),   // Product menu below header
 		'offcanvas-nav'	=> __( 'The Off-Canvas Menu', 'jointswp' ),	// Off-Canvas nav
 		'footer-links'	=> __( 'Footer Links', 'jointswp' )			// Secondary nav in footer
 	)
@@ -75,7 +75,7 @@ class Off_Canvas_Menu_Walker extends Walker_Nav_Menu {
 }
 
 // The Footer Menu
-function joints_footer_links() {
+/*function joints_footer_links() {
 	wp_nav_menu(array(
 		'container'			=> 'false',				// Remove nav container
 		'menu_id'			=> 'footer-links',		// Adding custom nav id
@@ -84,7 +84,39 @@ function joints_footer_links() {
 		'depth'				=> 0,					// Limit the depth of the nav
 		'fallback_cb'		=> ''					// Fallback function
 	));
-} /* End Footer Menu */
+} *//* End Footer Menu */
+
+// The Top Menu
+function joints_footer_links() {
+	wp_nav_menu(array(
+		'container'			=> false,						// Remove nav container
+		'menu_id'			=> 'main-nav',					// Adding custom nav id
+		'menu_class'		=> 'medium-horizontal menu',	// Adding custom nav class
+		'items_wrap'		=> '<ul id="%1$s" class="%2$s" data-responsive-menu="accordion medium-dropdown">%3$s</ul>',
+		'theme_location'	=> 'footer-links',					// Where it's located in the theme
+		'depth'				=> 5,							// Limit the depth of the nav
+		'fallback_cb'		=> false,						// Fallback function (see below)
+		'walker'			=> new Footer_Menu_Walker()
+	));
+}
+
+class Footer_Menu_Walker extends Walker_Nav_Menu {
+	function start_lvl(&$output, $depth = 0, $args = Array() ) {
+		$indent = str_repeat("\t", $depth);
+		$output .= "\n$indent<ul class=\"menu\">\n";
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
 
 // Header Fallback Menu
 function joints_main_nav_fallback() {

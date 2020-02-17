@@ -28,10 +28,12 @@ a {
   }
 }
 nav {
-  #footer-links {
+  #footer-links, #main-nav {
     justify-content: center;
+    margin: 0 auto;
   }
 }
+
 footer {
   nav{
     margin-top: 5.5rem;
