@@ -19,8 +19,12 @@ get_header(); ?>
       
       <div class="cell">
         <div class="card">
-          <?php $img_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-          <a href="<?php echo get_permalink(); ?>" title=""><img src="<?php echo $img_url; ?>" alt=""></a>
+          <?php $img_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+
+          $thumb_id = get_post_thumbnail_id(get_the_ID());
+          $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true); ?>
+          
+          <a href="<?php echo get_permalink(); ?>" title=""><img src="<?php echo $img_url; ?>" alt="<?php echo $alt; ?>"></a>
           <div class="card-section">
             <h4><a href="<?php echo get_permalink(); ?>" title=""><?php the_title(); ?></a></h4>
             <p><?php the_excerpt(); ?></p>

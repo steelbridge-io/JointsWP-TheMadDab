@@ -2,8 +2,8 @@ $dark : #2c3840;
 $white: #fefefe;
 
 body {overflow-x: hidden;}
-a {
-  color: #000;
+.excerpt-read-more {
+  font-weight: 700;
 }
 .home .page-title {
   display: none;
@@ -27,7 +27,6 @@ a {
     background: $dark;
     color: $white;
   }
-
   .card-section {
     text-align: center;
   }
@@ -36,7 +35,6 @@ a {
     color: $white;
   }
 }
-
   .logged-in.admin-bar > .off-canvas-wrapper > .off-canvas-content header .sticky-container .sticky.is-stuck {
     margin-top: 32px !important;
   }
@@ -45,6 +43,9 @@ nav {
   #footer-links, #main-nav {
     justify-content: center;
     margin: 0 auto;
+  }
+  img.top-bar-logo {
+    max-width: 20%;
   }
 }
 footer {

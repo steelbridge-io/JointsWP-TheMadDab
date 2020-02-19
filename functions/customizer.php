@@ -211,6 +211,54 @@ function themaddab_customizer_register( $wp_customize ) {
         },
       ]
     );
+	
+	  // Color 1 settings.
+	  $wp_customize->add_setting(
+		  'themaddab_link_color',
+		  [
+			  'default'           => '',
+			  'sanitize_callback' => 'sanitize_hex_color',
+		  ]
+	  );
+	
+	  $wp_customize->add_control(
+		  new WP_Customize_Color_Control(
+			  $wp_customize,
+			  'themaddab_link_color',
+			  [
+				  'description' => __( 'Change link color.', 'themaddab' ),
+				  'label'       => __( 'Link Color', 'themaddab' ),
+				  'section'     => 'colors',
+				  'settings'    => 'themaddab_link_color',
+			  ]
+		  )
+	  );
+	  
+	  
+	   // Color 1 settings.
+	  $wp_customize->add_setting(
+		  'themaddab_link_hover',
+		  [
+			  'default'           => '',
+			  'sanitize_callback' => 'sanitize_hex_color',
+		  ]
+	  );
+	
+	  $wp_customize->add_control(
+		  new WP_Customize_Color_Control(
+			  $wp_customize,
+			  'themaddab_link_hover',
+			  [
+				  'description' => __( 'Change link hover color.', 'themaddab' ),
+				  'label'       => __( 'Link Color:hover', 'themaddab' ),
+				  'section'     => 'colors',
+				  'settings'    => 'themaddab_link_hover',
+			  ]
+		  )
+	  );
+   
+   
+   
   }
   
   
