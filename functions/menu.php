@@ -14,14 +14,15 @@ function joints_top_nav() {
 	wp_nav_menu(array(
 		'container'			=> false,						// Remove nav container
 		'menu_id'			=> 'main-nav',					// Adding custom nav id
-		'menu_class'		=> 'medium-horizontal menu',	// Adding custom nav class
-		'items_wrap'		=> '<ul id="%1$s" class="%2$s" data-responsive-menu="accordion medium-dropdown">%3$s</ul>',
+		'menu_class'		=> 'medium-horizontal menu simple vertical',	// Adding custom nav class
+		'items_wrap'		=> '<ul id="%1$s" class="%2$s " data-responsive-menu="accordion medium-dropdown">%3$s</ul>',
 		'theme_location'	=> 'main-nav',					// Where it's located in the theme
 		'depth'				=> 5,							// Limit the depth of the nav
 		'fallback_cb'		=> false,						// Fallback function (see below)
 		'walker'			=> new Topbar_Menu_Walker()
 	));
 }
+
 
 // The Product Menu
 function joints_product_nav() {
@@ -74,24 +75,12 @@ class Off_Canvas_Menu_Walker extends Walker_Nav_Menu {
 	}
 }
 
-// The Footer Menu
-/*function joints_footer_links() {
-	wp_nav_menu(array(
-		'container'			=> 'false',				// Remove nav container
-		'menu_id'			=> 'footer-links',		// Adding custom nav id
-		'menu_class'		=> 'menu',				// Adding custom nav class
-		'theme_location'	=> 'footer-links',		// Where it's located in the theme
-		'depth'				=> 0,					// Limit the depth of the nav
-		'fallback_cb'		=> ''					// Fallback function
-	));
-} *//* End Footer Menu */
-
 // The Top Menu
 function joints_footer_links() {
 	wp_nav_menu(array(
 		'container'			=> false,						// Remove nav container
 		'menu_id'			=> 'main-nav',					// Adding custom nav id
-		'menu_class'		=> 'medium-horizontal menu',	// Adding custom nav class
+		'menu_class'		=> 'medium-horizontal menu dropup accoridian-menu',	// Adding custom nav class
 		'items_wrap'		=> '<ul id="%1$s" class="%2$s" data-responsive-menu="accordion medium-dropdown">%3$s</ul>',
 		'theme_location'	=> 'footer-links',					// Where it's located in the theme
 		'depth'				=> 5,							// Limit the depth of the nav
@@ -106,17 +95,6 @@ class Footer_Menu_Walker extends Walker_Nav_Menu {
 		$output .= "\n$indent<ul class=\"menu\">\n";
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
 
 // Header Fallback Menu
 function joints_main_nav_fallback() {
