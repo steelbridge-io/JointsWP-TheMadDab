@@ -20,9 +20,9 @@ get_header(); ?>
       <div class="cell">
         <div class="card">
           <?php $img_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-          <img src="<?php echo $img_url; ?>" alt="">
+          <a href="<?php echo get_permalink(); ?>" title=""><img src="<?php echo $img_url; ?>" alt=""></a>
           <div class="card-section">
-            <h4><?php the_title(); ?></h4>
+            <h4><a href="<?php echo get_permalink(); ?>" title=""><?php the_title(); ?></a></h4>
             <p><?php the_excerpt(); ?></p>
           </div>
         </div>
