@@ -41,7 +41,9 @@ function themaddab_customizer_register( $wp_customize ) {
     ]
   );
   
-  // Hero Title.
+ 
+  
+  // Hero Sub Title.
   $wp_customize->add_setting(
     'themaddab_hero_title',
     [
@@ -58,7 +60,7 @@ function themaddab_customizer_register( $wp_customize ) {
       'label'       => __( 'Front Page Title', 'themaddab' ),
       'section'     => 'themaddab_hero_section_settings',
       'settings'    => 'themaddab_hero_title',
-      'type'        => 'text',
+      'type'        => 'textarea',
     ]
   );
   
@@ -66,44 +68,10 @@ function themaddab_customizer_register( $wp_customize ) {
     $wp_customize->selective_refresh->add_partial(
       'themaddab_hero_title',
       [
-        'selector'        => '.front-page-hero-title',
+        'selector'        => '.hero-title',
         'settings'        => [ 'themaddab_hero_title' ],
         'render_callback' => function() {
           return get_theme_mod( 'themaddab_hero_title' );
-        },
-      ]
-    );
-  }
-  
-  // Hero Sub Title.
-  $wp_customize->add_setting(
-    'themaddab_hero_subtitle_text',
-    [
-      'default'           => '',
-      'sanitize_callback' => 'wp_kses_post',
-      'transport'         => isset( $wp_customize->selective_refresh ) ? 'postMessage' : 'refresh',
-    ]
-  );
-  
-  $wp_customize->add_control(
-    'themaddab_hero_subtitle_text',
-    [
-      'description' => __( 'Change the front page sub-title.', 'themaddab' ),
-      'label'       => __( 'Front Page Sub-Title', 'themaddab' ),
-      'section'     => 'themaddab_hero_section_settings',
-      'settings'    => 'themaddab_hero_subtitle_text',
-      'type'        => 'textarea',
-    ]
-  );
-  
-  if ( isset( $wp_customize->selective_refresh ) ) {
-    $wp_customize->selective_refresh->add_partial(
-      'themaddab_hero_subtitle_text',
-      [
-        'selector'        => '.hero-subtitle',
-        'settings'        => [ 'themaddab_hero_subtitle_text' ],
-        'render_callback' => function() {
-          return get_theme_mod( 'themaddab_hero_subtitle_text' );
         },
       ]
     );

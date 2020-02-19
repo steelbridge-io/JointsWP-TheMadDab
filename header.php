@@ -55,15 +55,11 @@
               
               <?php if(is_home() || is_front_page()) : ?>
                 <div id="frontpage-hero" class="card">
-                  <div class="front-page card-divider">
-                    <?php $front_page_title = get_theme_mod('themaddab_hero_title'); ?>
-                    <h1 class="front-page-hero-title"><?php echo $front_page_title; ?></h1>
-                  </div>
                   <div class="fp-topcont-img card-section">
-                    <?php $front_page_subtitle = get_theme_mod('themaddab_hero_subtitle_text');
+                    <?php $front_page_title = get_theme_mod('themaddab_hero_title');
                           $front_page_header_text = get_theme_mod('themaddab_hero_text'); ?>
-                    <h2 class="hero-subtitle"><?php echo $front_page_subtitle; ?></h2>
-                    <h3 class="hero-text"><?php echo $front_page_header_text; ?></h3>
+                    <h1 class="hero-title"><?php echo $front_page_title; ?></h1>
+                    <h2 class="hero-text"><?php echo $front_page_header_text; ?></h2>
                   </div>
                   <?php get_template_part( 'parts/nav', 'product-bar' ); ?>
                 </div>
