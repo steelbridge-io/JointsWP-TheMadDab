@@ -1,9 +1,19 @@
 $dark : #2c3840;
+$darkhover: #5F798A;
 $white: #fefefe;
 
 body {overflow-x: hidden;}
 .excerpt-read-more {
   font-weight: 700;
+}
+.text-center {
+  text-align: center;
+}
+.button {
+  background-color: $dark;
+}
+.button:hover {
+  background-color: $darkhover;
 }
 .single-post-margin,
 .page-margin {
@@ -22,6 +32,9 @@ body {overflow-x: hidden;}
     margin: 0 auto;
     display: block;
   }
+}
+.related.card.card-section:nth-child(2) {
+  margin-bottom: 7rem;
 }
 #frontpage-hero.card {
   margin-bottom: 11rem;

@@ -1,7 +1,7 @@
 <?php
 /*
 Template Name: Full Width (No Sidebar)
-Template Post Type: post, page, product_cpt
+Template Post Type: post, page
 */
 
 get_header(); ?>

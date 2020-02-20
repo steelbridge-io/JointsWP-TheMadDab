@@ -54,7 +54,8 @@ function product_cpt() {
     'exclude_from_search'   => false,
     'publicly_queryable'    => true,
     'capability_type'       => 'page',
-    'show_in_rest'          => true
+    'show_in_rest'          => true,
+    'rewrite'		        => array('slug' => 'product'),
   );
   register_post_type( 'product_cpt', $args );
   
@@ -71,7 +72,7 @@ function custom_travel_tax() {
       'hierarchical'	=> true,
       'label'			=> __('Product Types'),
       'query_var'		=> true,
-      'rewrite'		=> true,
+      'rewrite'		=> array('slug' => 'product-category'),
       'show_in_rest'  => true
     )
   );
