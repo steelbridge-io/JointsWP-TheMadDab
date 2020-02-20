@@ -20,7 +20,14 @@ get_header(); ?>
 		   		<?php get_template_part( 'parts/content', 'missing' ); ?>
 
 		    <?php endif; ?>
-
+		
+		   
+  
+  
+  
+  
+  
+  
 		</main> <!-- end #main -->
 
 		<?php get_sidebar(); ?>
