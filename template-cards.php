@@ -11,7 +11,11 @@ get_header(); ?>
     <div class="grid-x grid-margin-x small-up-2 medium-up-3 align-center">
       
       <?php
-      $args = array( 'post_type' => 'product_cpt', 'posts_per_page' => 24 );
+      $args = array(
+          'post_type' => 'product_cpt',
+          'posts_per_page' => 24,
+          'order' => 'ASC' );
+          
       $the_query = new WP_Query( $args );
       ?>
       <?php if ( $the_query->have_posts() ) : ?>
