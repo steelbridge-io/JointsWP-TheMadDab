@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * The template for displaying all pages
  *
@@ -9,7 +9,7 @@ get_header(); ?>
 	
 	<div class="content">
 	
-		<div class="inner-content grid-x grid-margin-x grid-padding-x">
+		<div class="page-margin inner-content grid-x grid-margin-x grid-padding-x">
 	
 		    <main class="main small-12 large-8 medium-8 cell" role="main">
 				
@@ -17,8 +17,8 @@ get_header(); ?>
 
 			    	<?php get_template_part( 'parts/loop', 'page' ); ?>
 			    
-			    <?php endwhile; endif; ?>							
-			    					
+			    <?php endwhile; endif; ?>
+			    
 			</main> <!-- end #main -->
 
 		    <?php get_sidebar(); ?>

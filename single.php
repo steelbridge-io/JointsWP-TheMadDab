@@ -1,13 +1,13 @@
-<?php 
+<?php
 /**
  * The template for displaying all single posts and attachments
  */
 
 get_header(); ?>
-			
+
 <div class="content">
 
-	<div class="inner-content grid-x grid-margin-x grid-padding-x">
+	<div class="single-post-margin inner-content grid-x grid-margin-x grid-padding-x">
 
 		<main class="main small-12 medium-8 large-8 cell" role="main">
 		

@@ -1,10 +1,11 @@
 <?php
 /*
 Template Name: Full Width (No Sidebar)
+Template Post Type: post, page, product_cpt
 */
 
 get_header(); ?>
-			
+	
 	<div class="content">
 	
 		<div class="inner-content grid-x grid-margin-x grid-padding-x">
@@ -15,10 +16,10 @@ get_header(); ?>
 
 					<?php get_template_part( 'parts/loop', 'page' ); ?>
 					
-				<?php endwhile; endif; ?>							
+				<?php endwhile; endif; ?>
 
 			</main> <!-- end #main -->
-		    
+		 
 		</div> <!-- end #inner-content -->
 	
 	</div> <!-- end #content -->
