@@ -2,10 +2,24 @@ $dark : #2c3840;
 $darkhover: #5F798A;
 $white: #fefefe;
 
+@import url('https://fonts.googleapis.com/css?family=Kanit:700&display=swap');
+
+h1, h2 {
+  font-family: "Kanit", san-serif;
+}
+
 body {overflow-x: hidden;}
 .excerpt-read-more {
   font-weight: 700;
 }
+
+.dropdown.menu.medium-horizontal>li.is-dropdown-submenu-parent>a:after {
+    border-color: $white transparent transparent;
+}
+.is-dropdown-submenu .is-dropdown-submenu-parent.opens-left>a:after {
+  border-color: transparent $white transparent transparent;
+}
+
 .text-center {
   text-align: center;
 }
@@ -19,8 +33,14 @@ body {overflow-x: hidden;}
 .page-margin {
   margin-top: 6rem;
 }
-.home .page-title {
-  display: none;
+.home {
+
+  footer {
+    margin-top: 11rem;
+  }
+  .page-title {
+    display: none;
+  }
 }
 .top-bar, .top-bar ul {
   background-color: transparent;
