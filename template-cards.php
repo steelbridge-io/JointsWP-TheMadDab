@@ -26,7 +26,7 @@ get_header(); ?>
   </div>
   
   <div id="card-cont-one" class="grid-container">
-    <div class="grid-x grid-margin-x small-up-1 medium-up-2 large-3 align-center">
+    <div class="grid-x grid-margin-x small-up-1 medium-up-2 large-up-3 align-center">
       
       <?php
       $args = array(

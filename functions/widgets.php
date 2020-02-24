@@ -3,7 +3,7 @@ register_sidebar( array(
 	'name' => __( 'Above Footer - Card Template', 'themaddab' ),
 	'id' => 'above-footer-widget',
 	'description' => __( 'Above Footer', 'themaddad' ),
-	'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+	'before_widget' => '<div id="%1$s" class="above-footer card-template widget-container %2$s">',
 	'after_widget' => '</div>',
 	'before_title' => '<h3 class="widget-title">',
 	'after_title' => '</h3>',

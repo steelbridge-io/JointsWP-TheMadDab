@@ -1,10 +1,18 @@
 $dark : #2c3840;
 $darkhover: #5F798A;
 $white: #fefefe;
+$lightgray: #eee;
 
 @import url('https://fonts.googleapis.com/css?family=Kanit:700&display=swap');
 
-h1, h2 {
+.above-footer.card-template {
+  margin-top: 7rem;
+  h3 {
+    text-align: center;
+  }
+}
+
+h1, h2, h3 {
   font-family: "Kanit", san-serif;
 }
 
@@ -36,7 +44,9 @@ body {overflow-x: hidden;}
 .home {
 
   footer {
-    margin-top: 11rem;
+    margin-top: 0rem;
+    padding-top: 3.618rem;
+    background-color: $lightgray;
   }
   .page-title {
     display: none;
@@ -109,10 +119,6 @@ body {overflow-x: hidden;}
   }
 
 }
-
-
-
-
 nav {
   #footer-links, #main-nav {
     justify-content: center;
@@ -121,6 +127,9 @@ nav {
   img.top-bar-logo {
     max-width: 20%;
   }
+}
+.footer {
+  margin-top: 7rem;
 }
 footer {
   nav{
