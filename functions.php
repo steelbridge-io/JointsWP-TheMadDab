@@ -54,3 +54,5 @@ require_once(get_template_directory(). '/functions/widgets.php');
 
 // Customize the WordPress admin
 // require_once(get_template_directory().'/functions/admin.php');
+
+add_filter( 'widget_text', 'do_shortcode' );

@@ -26,12 +26,12 @@ get_header(); ?>
   </div>
   
   <div id="card-cont-one" class="grid-container">
-    <div class="grid-x grid-margin-x small-up-2 medium-up-3 align-center">
+    <div class="grid-x grid-margin-x small-up-1 medium-up-2 large-3 align-center">
       
       <?php
       $args = array(
           'post_type' => 'product_cpt',
-          'posts_per_page' => 24,
+          'posts_per_page' => 12,
           'order' => 'ASC' );
           
       $the_query = new WP_Query( $args );
@@ -61,5 +61,9 @@ get_header(); ?>
     </div>
   </div>
 </div> <!-- end #content -->
+
+<div class="grid-container full">
+	<?php dynamic_sidebar( 'above-footer-widget' ); ?>
+</div>
 
 <?php get_footer(); ?>
