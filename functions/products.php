@@ -63,8 +63,8 @@ function product_cpt() {
 add_action( 'init', 'product_cpt', 0 );
 
 // Custom Taxonomy
-add_action('init', 'custom_travel_tax');
-function custom_travel_tax() {
+add_action('init', 'custom_mad_tax');
+function custom_mad_tax() {
   register_taxonomy(
     'product-category',
     'product_cpt',

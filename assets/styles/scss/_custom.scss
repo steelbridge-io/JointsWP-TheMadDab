@@ -57,6 +57,42 @@ body {overflow-x: hidden;}
     margin-top: 32px !important;
   }
 
+
+.archive {
+  .entry-content.product-archive p {
+    padding: 1.618rem 1em 1.618rem;
+  }
+  .article-header h2 {
+   font-size: 1.5rem;
+    padding: .3rem .3em;
+  }
+  #card-cont-one {
+    margin-top: 5.5rem;
+  }
+  .content {
+    margin-bottom: 11rem;
+    margin-top: 11rem;
+  }
+  .pagination li span {
+    padding: 1.489rem 1.8rem;
+    border: 3px solid #ccc;
+  }
+  .pagination li {
+    font-size: 1.4rem;
+  }
+  .pagination a {
+    padding: 1.19rem 1.63rem !important;
+    border: 3px solid #ccc !important;
+  }
+  .pagination .current {
+    background-color: $dark;
+  }
+
+}
+
+
+
+
 nav {
   #footer-links, #main-nav {
     justify-content: center;
@@ -193,7 +229,31 @@ $topbar-responsive-animation-type: fade-in; // or use slide-down or none
   }
 }
 
+@include breakpoint(medium) {
+  header {
+    h1 {
+      text-align: center;
+    }
+  }
+  .archive {
+    .content {
+      margin-top: 8rem;
+    }
+  }
+}
+
 @include breakpoint(small only) {
+  header {
+    h1 {
+      text-align: center;
+    }
+  }
+  .archive {
+    .content {
+      margin-top: 7rem;
+    }
+  }
+
   .topbar-responsive-links {
     animation-fill-mode: both;
     animation-duration: 0.5s;
