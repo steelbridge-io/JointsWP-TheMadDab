@@ -243,6 +243,9 @@ $topbar-responsive-animation-type: fade-in; // or use slide-down or none
 }
 
 @include breakpoint(small only) {
+  #frontpage-hero.card {
+    margin-bottom: 5.5rem;
+  }
   header {
     h1 {
       text-align: center;
@@ -267,6 +270,10 @@ $topbar-responsive-animation-type: fade-in; // or use slide-down or none
       animation: none;
     }
   }
+}
+
+.accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle)>a:after {
+  right: 0rem;
 }
 
 
