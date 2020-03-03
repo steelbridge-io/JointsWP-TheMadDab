@@ -32,7 +32,7 @@ function joints_product_nav() {
     'menu_class'		=> 'medium-horizontal menu',	// Adding custom nav class
     //'items_wrap'		=> '<ul id="%1$s" class="%2$s" data-responsive-menu="accordion medium-dropdown">%3$s</ul>',
 	
-	'items_wrap'        => '<ul id="%1$s" class="%2$s menu vertical nested">%3$s</ul>',
+	'items_wrap'        => '<ul id="%1$s" class="%2$s menu vertical nested" data-responsive-menu="accordion medium-dropdown">%3$s</ul>',
     'theme_location'	=> 'product-nav',					// Where it's located in the theme
     'depth'				=> 5,							// Limit the depth of the nav
     'fallback_cb'		=> false,						// Fallback function (see below)

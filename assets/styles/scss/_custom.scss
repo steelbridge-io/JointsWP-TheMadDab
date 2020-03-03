@@ -70,6 +70,7 @@ body {overflow-x: hidden;}
   margin-bottom: 7rem;
 }
 #frontpage-hero.card {
+  overflow: visible;
   margin-bottom: 11rem;
   border: none;
   .front-page.card-divider {
@@ -164,8 +165,10 @@ footer {
     margin: 0 auto;
     ul li a {
       color: $white;
+      background-color: $dark;
     }
   }
+
 }
 
 /* New menu style */
